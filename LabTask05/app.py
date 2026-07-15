@@ -48,6 +48,8 @@ if algo == "KMeans":
     k = st.sidebar.slider("Number of Clusters", 2, 10)
 elif algo == "DBSCAN":
     #st.write("STUDENTS, ADD DB SCAN parameters")
+    # Instead of a slider, using originally recommended params from lab.
+    theeps = 0.22
     k = 5
 
 labels = []
@@ -57,7 +59,7 @@ if algo == "KMeans":
 elif algo == "DBSCAN":
     #st.write("STUDENTS, ADD DB SCAN")
     #st.write("DBSCAN RESULTS BELOW")
-    model = DBSCAN(eps=0.22, min_samples = 5) # Using originally recommended params from lab.
+    model = DBSCAN(eps=theeps, min_samples = k) 
     labels = model.fit_predict(X_scaled)
 
 # Catch error if no labels do not continue
