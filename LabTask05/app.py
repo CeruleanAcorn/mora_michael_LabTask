@@ -76,7 +76,7 @@ st.metric("Number of Clusters", n_clusters_found)
 # st.dataframe(df.head())
 # st.write(X_scaled)
 
-map_tab, dr_tab, lab_tab = st.tabs(["Map", "Dimensionality Reduction", "LAB SUBMISSION: DBSCAN"])
+map_tab, dr_tab = st.tabs(["Map", "Dimensionality Reduction"])
 
 with map_tab:
     st.write("MAP")
@@ -99,11 +99,6 @@ with dr_tab:
 
     st.plotly_chart(fig_dr, width="stretch")
  # st.write(embedding)
-
-with lab_tab:
-    st.write("YEAY")
- # st.write(embedding)
-
 
 # In folder with environment, run this in terminal to start the app.
 # streamlit run app.py
